@@ -1,6 +1,6 @@
 # GitHub Explorer (atask-github-explorer)
 
-A web application built with React, TypeScript, and Vite that allows users to search for GitHub profiles and view their public repositories. This project is part of the 'atask' series.
+A web application built with React, TypeScript, and Vite that allows users to search for GitHub profiles and view their public repositories
 
 ## Features
 
