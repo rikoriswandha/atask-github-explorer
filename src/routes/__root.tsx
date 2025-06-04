@@ -37,7 +37,7 @@ function RootComponent() {
             }}
           >
             <Group justify="space-between" align="center" style={{ flex: 1 }}>
-              <Title order={3} c="blue">
+              <Title order={3} c="blue" data-testid="title">
                 Github Explorer
               </Title>
             </Group>

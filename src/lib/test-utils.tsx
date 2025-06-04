@@ -1,16 +1,24 @@
-import React, { ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import { MantineProvider } from '@mantine/core';
+import { createRouter } from '@tanstack/react-router';
+import { routeTree } from '@/routeTree.gen';
 import '@mantine/core/styles.css';
 
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+export const testRouter = createRouter({
+  // Very important to prevent test slowdown
+  defaultPendingMinMs: 0,
+  routeTree,
+});
+
+const AllProviders = ({ children }: { children: ReactNode }) => {
   return <MantineProvider>{children}</MantineProvider>;
 };
 
-const customRender = (
+const allProvidersRender = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>
-) => render(ui, { wrapper: AllTheProviders, ...options });
+) => render(ui, { wrapper: AllProviders, ...options });
 
 export * from '@testing-library/react';
-export { customRender as render };
+export { allProvidersRender as render };
