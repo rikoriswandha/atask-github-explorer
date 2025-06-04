@@ -8,11 +8,13 @@ import { routeTree } from '@/routeTree.gen';
 import { nprogress } from '@mantine/nprogress';
 import { queryClient } from './lib/query-client';
 import { QueryClientProvider } from '@tanstack/react-query';
+import { ErrorComponent } from './components/error-component';
 
 const router = createRouter({
   routeTree,
   defaultPreload: 'intent',
   defaultPreloadStaleTime: 0,
+  defaultErrorComponent: ErrorComponent,
 });
 
 router.subscribe(
