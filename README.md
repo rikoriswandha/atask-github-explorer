@@ -84,22 +84,6 @@ README.md               # This file!
     pnpm install
     ```
 
-3.  **Set up Environment Variables (Optional but Recommended):**
-
-    To avoid GitHub API rate limits and access more data, create a `.env.local` file in the root of your project by copying `.env.example` (if it exists) or creating a new one:
-
-    ```bash
-    cp .env.example .env.local
-    ```
-
-    Then, add your GitHub Personal Access Token (PAT) to `.env.local`:
-
-    ```env
-    VITE_GITHUB_TOKEN=your_github_personal_access_token_here
-    ```
-
-    You can generate a PAT from your [GitHub Developer Settings](https://github.com/settings/tokens). For this project, a token with `public_repo` and `user:read` scopes should be sufficient. If you don't provide a token, the application will use unauthenticated requests, which have stricter rate limits.
-
 ### Running the Development Server
 
 ```bash
@@ -141,21 +125,3 @@ In the `package.json`, you will likely find the following scripts:
 2.  Use the search bar to type in a GitHub username.
 3.  Press Enter or click the search button.
 4.  Click on the user's profile to view their public repositories.
-
-## Contributing
-
-Contributions are welcome! If you'd like to improve `atask-github-explorer`:
-
-1.  Fork the repository.
-2.  Create a new feature branch (`git checkout -b feature/amazing-feature`).
-3.  Make your changes and commit them (`git commit -m 'Add some amazing feature'`).
-4.  Push to the branch (`git push origin feature/amazing-feature`).
-5.  Open a Pull Request.
-
-Please ensure your code adheres to the project's linting rules.
-
-## License
-
-This project is likely under the MIT License or a similar open-source license (please add a `LICENSE` file if one doesn't exist).
-
----
